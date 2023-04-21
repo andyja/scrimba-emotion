@@ -171,16 +171,18 @@ const catsData = [
 
 
 function getEmotionArray(cats){
-    let emotionsArray = [];
-    cats.forEach(cat => { 
-        cat.emotionTags.forEach(emotion => {
-            if(!emotionsArray.includes(emotion)){
-                emotionsArray.push(emotion);
-            }
-            
-        })
-    });   
-    console.log(emotionsArray)
+    // let emotionsArray = [];
+    // cats.forEach(cat => { 
+    //     cat.emotionTags.forEach(emotion => {
+    //         if(!emotionsArray.includes(emotion)){
+    //             emotionsArray.push(emotion);
+    //         }
+    //     })
+    // });   
+    // console.log(emotionsArray)
+    for (let cat of cats){
+        console.log(cat)
+    }
 }
 
 const testingBtn = document.getElementById("testing")
