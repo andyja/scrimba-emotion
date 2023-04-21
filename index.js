@@ -174,7 +174,10 @@ function getEmotionArray(cats){
     let emotionsArray = [];
     cats.forEach(cat => { 
         cat.emotionTags.forEach(emotion => {
-            emotionsArray.push(emotion);
+            if(!emotionsArray.includes(emotion)){
+                emotionsArray.push(emotion);
+            }
+            
         })
     });   
     console.log(emotionsArray)
