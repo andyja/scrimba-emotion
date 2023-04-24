@@ -180,9 +180,13 @@ function getEmotionArray(cats){
     //     })
     // });   
     // console.log(emotionsArray)
-    for (let cat of cats){
-        console.log(cat)
+    const emotionsArray = [];
+    for (let cat of cats){ 
+        for (let emotion of cat.emotionTags) {
+            emotionsArray.push(emotion)
+        }
     }
+    console.log(emotionsArray)
 }
 
 const testingBtn = document.getElementById("testing")
