@@ -1,8 +1,27 @@
-import { catsData } from '/data.js'
+import { catsData } from '/data.js';
 
-const emotionRadios = document.getElementById('emotion-radios')
+const emotionRadios = document.getElementById('emotion-radios');
+const getImageBtn = document.getElementById('get-image-btn');
+const gifsOnlyOption = document.getElementById("gifs-only-option")
 
 emotionRadios.addEventListener('change', highlightCheckedOption)
+
+getImageBtn.addEventListener('click', getMatchingCatsArray);
+
+function getMatchingCatsArray(){
+    let isSelected = false;
+    if (gifsOnlyOption.checked){
+        isSelected = true;
+        console.log(isSelected);
+    } else {
+        console.log("not working")
+    }
+    const matchingCatsArray = [];
+    if (document.querySelector('input[type="radio"]:checked')){
+    const matchingCatsArray = document.querySelector('input[type="radio"]:checked').value;
+    console.log(matchingCatsArray)
+    }
+}
 
 function highlightCheckedOption(e){
     const radios = document.getElementsByClassName('radio')
